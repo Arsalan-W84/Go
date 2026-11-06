@@ -23,9 +23,10 @@ package main
 
 import "fmt"
 
-//creating a custom type loglevel
+//creating a custom type 
 type loglevel int
 
+//NOTE 1 : CREATING AN ENUM OF THIS CUSTOM TYPE.
 const(
 	Logdebug loglevel = iota
 	Loginfo 
@@ -35,6 +36,10 @@ const(
 )
 
 var levelnames = []string{"Debug" , "Info" , "Warn" , "Error" , "Fatal"}
+
+
+//NOTE 2: adding a method to a custom type , we can call this method UPON a variable
+//of this type.
 func (l loglevel) String() string {
 	if(l< Logdebug || l>Logfatal){
 		return "Invalid log"
