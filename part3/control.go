@@ -24,6 +24,21 @@ func PrintSerial(n int) string{
 	}
 	return op.String()
 }
+
+func Printwhileloop(n int ) string{
+	var op strings.Builder
+	i:=1
+	for i<=n {
+		if i<n {	
+			op.WriteString(strconv.Itoa(i));
+			op.WriteString(",");
+		}else{
+			op.WriteString(strconv.Itoa(i));
+		}
+		i++
+	}
+	return op.String()
+}
 func main() {
 	fmt.Println(PrintSerial(10))
 }
