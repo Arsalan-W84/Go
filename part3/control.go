@@ -39,6 +39,17 @@ func Printwhileloop(n int ) string{
 	}
 	return op.String()
 }
+func PrintArrayElements( str []string) string{
+	var op strings.Builder
+	for i:=range str {
+		op.WriteString(str[i])
+		if i!=len(str)-1 {
+			op.WriteString(",")
+		}
+			
+	}
+	return  op.String()
+}
 func main() {
 	fmt.Println(PrintSerial(10))
 }
