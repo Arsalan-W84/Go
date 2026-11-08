@@ -48,7 +48,24 @@ func PrintArrayElements( str []string) string{
 		}
 			
 	}
+	// another syntax : 
+	// for index , value := range str {
+	// 	fmt.Println( index , " : " , value)
+	// }
+	
 	return  op.String()
+}
+
+func PrintArray_without_builder( str []string) string{
+	var op string
+	for i:=range str {
+		op+=str[i]
+		if i!=len(str)-1 {
+			op+=","
+		}
+			
+	}
+	return  op
 }
 func main() {
 	fmt.Println(PrintSerial(10))
