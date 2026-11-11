@@ -32,4 +32,13 @@ func TestSumAll(t *testing.T) {
 			t.Errorf("got: %v\n want:%v ", got , want)
 		}
 	})
+
+	t.Run("passing empty slices" , func(t *testing.T) {
+		got := SumAll([]int{}, []int{3, 4, 5})
+		want := []int{0, 12}
+
+		if !slices.Equal(got , want) {
+			t.Errorf("got: %v\n want:%v ", got , want)
+		}
+	})
 }
