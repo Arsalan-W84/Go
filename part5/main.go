@@ -24,14 +24,14 @@ func PrintMatrix(nums [][]int) string {
 //input : a varying number of slices
 //output : slice containing sum of all the slices passed
 func SumAll( nums ...[]int ) []int {
-	var op []int
+	op := make( []int , len(nums))
 	var sum int
-	for _, slice := range nums {
+	for i, slice := range nums {
 		sum = 0
 		for _, val := range slice {
 			sum+=val
 		}
-		op = append(op, sum)
+		op[i] = sum
 	}
 	return op
 }
